@@ -1,6 +1,10 @@
 # Smarthouse302
 My Home Assistant Configuration (@Smarthouse302)
 
+Be sure to ⭐️ my configuration repo so you can keep up to date on any daily progress!
+
+This Repo is designed for Smart Home inspiration. The configuration, devices, layout, linked Blog posts and YouTube videos should help inspire you to jump head first into the IOT world. This is the live working configuration of my Smart Home. Use the menu links to jump between sections. All of the code is under the config directory and free to use and contribute to. Be sure to subscribe to the Blog Mailing list and YouTube Channel. (https://YouTube.com/vCloudInfo)
+
 ## Hardware
 I am running Home Assistant within Hass.io on an Ubuntu virtual machine which is running within VMware ESXi on an Intel NUC. For the most part, I have attempted to abstract as much hardware from the equation as possible.
 
@@ -45,3 +49,11 @@ Hubs
 
 
 # To Do List
+
+
+
+Add-ons running on my Home Assistant (Hass.io) instnace
+DuckDNS - For keeping my SSL certificate validated through Let's Encrypt.
+Mosquitto Broker - For managing my Sonoff devices and any future MQTT devices
+SSH Server - For SSH into the Raspberry Pi
+Samba Share - For exploring the config files from a Windows computer
