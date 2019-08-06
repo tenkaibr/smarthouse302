@@ -1,6 +1,10 @@
 # Smarthouse302
 My Home Assistant Configuration (@Smarthouse302)
 
+<p align="center">
+  <img width="246" height="246" src="/images/logo.png">
+</p>
+
 This is my Home Assistant configuration for a small appartment with 2 rooms. It is my currently active set of configuration files for my Home Assistant running on Raspberry Pi.
 
 Be sure to ⭐️ my configuration repo so you can keep up to date on any daily progress! Check out my blog.
