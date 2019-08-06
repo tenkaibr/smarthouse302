@@ -16,7 +16,7 @@ Hardware | Hubs | Lighting | Climate| Switches | Locks | Security | Voice Assist
 # General Overview
 This configuration controls a couple of significant features in my smart home.
 
-<p align="center"><img width="500" height="500" src="/images/esquema.png"></p>
+<p align="center"><img width="500" height="450" src="/images/esquema.png"></p>
 
 ### Main Hardware
 
@@ -31,6 +31,23 @@ I am running Home Assistant within Hass.io on an Raspberry Pi B+.
 2. Mosquitto Broker - For managing my Sonoff devices and any future MQTT devices.
 3. Samba Share - For exploring the config files from a Windows computer.
 4. Spotify Connect (to do).
+
+### My Custom cards on Home Assistant
+
+1. 
+
+card-tools
+button-card.js
+popup-card
+atomic calendar
+radial-menu
+layout-card
+markdown-mod
+
+
+
+
+https://github.com/atomic7777/atomic_calendar
 
 ### Automation Overview
 Typical Automations in use include
