@@ -1,5 +1,5 @@
 # Smarthouse302
-## My Home Assistant Configuration (@Smarthouse302)
+My Home Assistant Configuration (@Smarthouse302)
 
 <p align="center">
   <img width="246" height="246" src="/images/logo.png">
@@ -15,7 +15,7 @@ Use the menu links bellow to jump between sections.
 
 | Hubs | Lighting | Climate| Switches| Locks | Security | Voice Assistant | Media | Sensors | Cameras | Garage | Vacuum | Network | Other Hardware | Retired Devices | Software | Screenshots |
 
-## Hardware
+# Hardware
 I am running Home Assistant within Hass.io on an Ubuntu virtual machine which is running within VMware ESXi on an Intel NUC. For the most part, I have attempted to abstract as much hardware from the equation as possible.
 
 ## General Information
