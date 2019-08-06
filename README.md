@@ -27,11 +27,8 @@ This configuration controls a couple of significant features in my smart home.
 
 I am running Home Assistant within Hass.io on an Raspberry Pi B+.
 
-1. [TP-Link ArcherC5400 v2.0](https://www.tp-link.com/us/home-networking/wifi-router/archer-c5400/) (Firmware 1.2.2 Build 20170912 rel.56240)
-2. [Raspberry Pi 3 Model B+ ](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
-
-Home Assistant 0.96.5
-python_version	3.7.4
+1. [TP-Link ArcherC5400 v2.0](https://www.tp-link.com/us/home-networking/wifi-router/archer-c5400/) (Firmware 1.2.2 Build 20170912 rel.56240).
+2. [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) running Home Assistant 0.96.5.
 
 ### Add-ons running on my Home Assistant (Hass.io) instance
 
