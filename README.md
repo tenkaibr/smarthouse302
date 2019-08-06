@@ -1,9 +1,7 @@
 # Smarthouse302
 My Home Assistant Configuration (@Smarthouse302)
 
-<p align="center">
-  <img width="246" height="246" src="/images/logo.png">
-</p>
+<p align="center"><img width="246" height="246" src="/images/logo.png"></p>
 
 This is my Home Assistant configuration for a small appartment with 7 rooms (living room, kitchen, bedroom, suite, balcony and two bathrooms). It is my currently active set of configuration files for my Home Assistant running on Raspberry Pi.
 
@@ -15,15 +13,12 @@ Use the menu links bellow to jump between sections.
 
 Hardware | Hubs | Lighting | Climate| Switches | Locks | Security | Voice Assistant | Media | Sensors | Cameras | Vacuum | Network | Other Hardware | Software | Screenshots |
 
-
-
-
-
-
 # General Overview
 This configuration controls a couple of significant features in my smart home.
 
-### Hardware
+<p align="center"><img width="500" height="500" src="/images/esquema.png"></p>
+
+### Main Hardware
 
 I am running Home Assistant within Hass.io on an Raspberry Pi B+.
 
