@@ -34,20 +34,14 @@ I am running Home Assistant within Hass.io on an Raspberry Pi B+.
 
 ### My Custom cards on Home Assistant
 
-1. 
-
-card-tools
+1. [markdown Mod](https://github.com/thomasloven/lovelace-markdown-mod)
+2. [Atomic Calendar](https://github.com/atomic7777/atomic_calendar)
+3. card-tools
 button-card.js
 popup-card
-atomic calendar
-radial-menu
+
+[Radial Menu](https://github.com/custom-cards/radial-menu) - Provides a radial menu on click for quick/space saving access to commands. 
 layout-card
-markdown-mod
-
-
-
-
-https://github.com/atomic7777/atomic_calendar
 
 ### Automation Overview
 Typical Automations in use include
