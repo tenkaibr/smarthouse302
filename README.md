@@ -1,5 +1,5 @@
 # Smarthouse302
-My Home Assistant Configuration (@Smarthouse302)
+##My Home Assistant Configuration (@Smarthouse302)
 
 <p align="center">
   <img width="246" height="246" src="/images/logo.png">
@@ -9,13 +9,11 @@ This is my Home Assistant configuration for a small appartment with 2 rooms. It 
 
 Be sure to ⭐️ my configuration repo so you can keep up to date on any daily progress! And check out [my blog](https://smarthouse302.blogspot.com/).
 
-This Repo is designed for Smart Home inspiration. The configuration, devices, layout, linked Blog posts and YouTube videos should help inspire you to jump head first into the IOT world. This is the live working configuration of my Smart Home.  All of the code is under the config directory and free to use and contribute to. Be sure to subscribe to the Blog Mailing list and YouTube Channel. (https://YouTube.com/vCloudInfo)
-
 Use the menu links bellow to jump between sections.
 
 # Menu
 
-| Hubs | Lighting | Climate| Outlets & Switches| Locks | Security | Voice Assistant | Media | Sensors | Cameras | Garage | Vacuum | Network | Other Hardware | Retired Devices | Software | Screenshots |
+| Hubs | Lighting | Climate| Switches| Locks | Security | Voice Assistant | Media | Sensors | Cameras | Garage | Vacuum | Network | Other Hardware | Retired Devices | Software | Screenshots |
 
 ## Hardware
 I am running Home Assistant within Hass.io on an Ubuntu virtual machine which is running within VMware ESXi on an Intel NUC. For the most part, I have attempted to abstract as much hardware from the equation as possible.
