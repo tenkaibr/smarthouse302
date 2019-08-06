@@ -1,5 +1,5 @@
 # Smarthouse302
-##My Home Assistant Configuration (@Smarthouse302)
+## My Home Assistant Configuration (@Smarthouse302)
 
 <p align="center">
   <img width="246" height="246" src="/images/logo.png">
