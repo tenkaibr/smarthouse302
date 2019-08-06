@@ -7,7 +7,7 @@ My Home Assistant Configuration (@Smarthouse302)
 
 This is my Home Assistant configuration for a small appartment with 2 rooms. It is my currently active set of configuration files for my Home Assistant running on Raspberry Pi.
 
-Be sure to ⭐️ my configuration repo so you can keep up to date on any daily progress! And check out [my blog](https://smarthouse302.blogspot.com/).
+Be sure to ⭐️ my configuration repo so you can keep up to date on any daily progress! And check out [my blog](https://smarthouse302.blogspot.com/) and [my instagram account](https://www.instagram.com/smarthouse302/)
 
 Use the menu links bellow to jump between sections.
 
