@@ -19,23 +19,28 @@ Hardware | Hubs | Lighting | Climate| Switches | Locks | Security | Voice Assist
 
 
 
+
 # General Overview
 This configuration controls a couple of significant features in my smart home.
 
 ### Hardware
-I am running Home Assistant within Hass.io on an Ubuntu virtual machine which is running within VMware ESXi on an Intel NUC. For the most part, I have attempted to abstract as much hardware from the equation as possible.
 
-TP-Link ArcherC5400 v2.0 (Firmware 1.2.2 Build 20170912 rel.56240)
-https://www.tp-link.com/us/home-networking/wifi-router/archer-c5400/
+I am running Home Assistant within Hass.io on an Raspberry Pi B+.
 
-Alarm Clock using my bedroom lights and TV
-Turning the outside lights on at night (to do)
-Arming the alarm system when nobody is home
-Security lighting when motion is detected at my front door
+1. [TP-Link ArcherC5400 v2.0](https://www.tp-link.com/us/home-networking/wifi-router/archer-c5400/) (Firmware 1.2.2 Build 20170912 rel.56240)
+2. [Raspberry Pi 3 Model B+ ](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
 
-Note: Private information is stored in secrets.yaml (not uploaded)
+Home Assistant 0.96.5
+python_version	3.7.4
 
-## Automation Overview
+### Add-ons running on my Home Assistant (Hass.io) instance
+
+1. DuckDNS - For keeping my SSL certificate validated through Let's Encrypt.
+2. Mosquitto Broker - For managing my Sonoff devices and any future MQTT devices.
+3. Samba Share - For exploring the config files from a Windows computer.
+4. Spotify Connect (to do).
+
+### Automation Overview
 Typical Automations in use include
 
 Turn on / off outside lights at sunset
@@ -56,6 +61,13 @@ Enhance security system through extra sensors and motion reading
 Send alert if auxiliary / emergency heat is activated
 Send long term data to InfluxDB for Grafana configuration
 
+
+Alarm Clock using my bedroom lights and TV
+Turning the outside lights on at night (to do)
+Arming the alarm system when nobody is home
+Security lighting when motion is detected at my front door
+
+Note: Private information is stored in secrets.yaml (not uploaded)
 
 2. Controle e monitoramento da iluminação;
 3. Monitoramento e abertura de porta e janelas.
@@ -80,9 +92,3 @@ Hubs
 # To Do List
 
 
-
-Add-ons running on my Home Assistant (Hass.io) instnace
-DuckDNS - For keeping my SSL certificate validated through Let's Encrypt.
-Mosquitto Broker - For managing my Sonoff devices and any future MQTT devices
-SSH Server - For SSH into the Raspberry Pi
-Samba Share - For exploring the config files from a Windows computer
