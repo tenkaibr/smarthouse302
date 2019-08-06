@@ -5,26 +5,34 @@ My Home Assistant Configuration (@Smarthouse302)
   <img width="246" height="246" src="/images/logo.png">
 </p>
 
-This is my Home Assistant configuration for a small appartment with 2 rooms. It is my currently active set of configuration files for my Home Assistant running on Raspberry Pi.
+This is my Home Assistant configuration for a small appartment with 7 rooms (living room, kitchen, bedroom, suite, balcony and two bathrooms). It is my currently active set of configuration files for my Home Assistant running on Raspberry Pi.
 
-Be sure to ⭐️ my configuration repo so you can keep up to date on any daily progress! And check out [my blog](https://smarthouse302.blogspot.com/) and [my instagram account](https://www.instagram.com/smarthouse302/)
+Be sure to ⭐️ my configuration repo so you can keep up to date on any daily progress! Don't forget to check out [my blog](https://smarthouse302.blogspot.com/) and [my instagram account](https://www.instagram.com/smarthouse302/)
 
 Use the menu links bellow to jump between sections.
 
 # Menu
 
-| Hubs | Lighting | Climate| Switches| Locks | Security | Voice Assistant | Media | Sensors | Cameras | Garage | Vacuum | Network | Other Hardware | Retired Devices | Software | Screenshots |
+Hardware | Hubs | Lighting | Climate| Switches | Locks | Security | Voice Assistant | Media | Sensors | Cameras | Vacuum | Network | Other Hardware | Software | Screenshots |
 
-# Hardware
-I am running Home Assistant within Hass.io on an Ubuntu virtual machine which is running within VMware ESXi on an Intel NUC. For the most part, I have attempted to abstract as much hardware from the equation as possible.
 
-## General Information
+
+
+
+# General Overview
 This configuration controls a couple of significant features in my smart home.
 
+### Hardware
+I am running Home Assistant within Hass.io on an Ubuntu virtual machine which is running within VMware ESXi on an Intel NUC. For the most part, I have attempted to abstract as much hardware from the equation as possible.
+
+TP-Link ArcherC5400 v2.0 (Firmware 1.2.2 Build 20170912 rel.56240)
+https://www.tp-link.com/us/home-networking/wifi-router/archer-c5400/
+
 Alarm Clock using my bedroom lights and TV
-Turning the outside lights on at night
+Turning the outside lights on at night (to do)
 Arming the alarm system when nobody is home
 Security lighting when motion is detected at my front door
+
 Note: Private information is stored in secrets.yaml (not uploaded)
 
 ## Automation Overview
@@ -48,6 +56,17 @@ Enhance security system through extra sensors and motion reading
 Send alert if auxiliary / emergency heat is activated
 Send long term data to InfluxDB for Grafana configuration
 
+
+2. Controle e monitoramento da iluminação;
+3. Monitoramento e abertura de porta e janelas.
+4. Programação de cenários de iluminação.
+5. Controle do ar-condicionado.
+6. Integração total com as TVs.
+7. Aspiração automatizada.
+8. Manipulação de cortinas e persianas.
+9. Sonorização ambiente.
+10. Controle por voz.
+11. Higienização do mictório do pet.
 
 
 # Devices
