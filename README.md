@@ -18,6 +18,17 @@ This configuration controls a couple of significant features in my smart home.
 
 <p align="center"><img width="500" height="450" src="/images/esquema.png"></p>
 
+1. Lighting control and monitoring;
+2. Monitoring and opening of doors and windows.
+3. Programming of lighting scenarios.
+4. Air conditioning control.
+5. Full integration with TVs.
+6. Automated aspiration.
+7. Handling of curtains and blinds.
+8. Ambient sound.
+9. Voice control.
+10. Pet urinal hygiene.
+
 ### Main Hardware
 
 I am running Home Assistant within Hass.io on an Raspberry Pi B+.
@@ -41,46 +52,6 @@ I am running Home Assistant within Hass.io on an Raspberry Pi B+.
 5. [Popup-card](https://github.com/thomasloven/lovelace-popup-card) - Replace the more-info dialog of one entity with a custom lovelace card
 6. [Radial Menu](https://github.com/custom-cards/radial-menu) - Provides a radial menu on click for quick/space saving access to commands. 
 7. [Layout-card](https://github.com/thomasloven/lovelace-layout-card) - Gives more control over the placement of lovelace cards
-
-### Automation Overview
-Typical Automations in use include
-
-Turn on / off outside lights at sunset
-Turn on / off pantry light when door opens / closes
-Turn off lights after no activity / motion
-Grouping of lights for use with Alexa for commands
-Perform actions based on people leaving home / arriving home
-Update location for user based on geolocation zones (Work, School, Church, Home)
-Enable holiday color lights on outside lights via scenes
-Turn on lights based on motion / ring front door and return to previous theme after
-Send notification and flash lights if water detected in basement
-Send notification and flash lights if water detected by washing machine / Kitchen Sink
-Cut power to washing machine if water detected by washing machine
-Send notification and flash lights if CO / Smoke detectors go off
-Send alert if Eth miner hashrate drops
-Send alert if power is lost at the house
-Enhance security system through extra sensors and motion reading
-Send alert if auxiliary / emergency heat is activated
-Send long term data to InfluxDB for Grafana configuration
-
-
-Alarm Clock using my bedroom lights and TV
-Turning the outside lights on at night (to do)
-Arming the alarm system when nobody is home
-Security lighting when motion is detected at my front door
-
-Note: Private information is stored in secrets.yaml (not uploaded)
-
-2. Controle e monitoramento da iluminação;
-3. Monitoramento e abertura de porta e janelas.
-4. Programação de cenários de iluminação.
-5. Controle do ar-condicionado.
-6. Integração total com as TVs.
-7. Aspiração automatizada.
-8. Manipulação de cortinas e persianas.
-9. Sonorização ambiente.
-10. Controle por voz.
-11. Higienização do mictório do pet.
 
 ### Screenshots
 
