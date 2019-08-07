@@ -148,8 +148,9 @@ Dark:
 
 ### Sensors
 
-| [TP-Link HS200](https://www.tp-link.com/la/home-networking/smart-switch/hs200/) | [Sonoff Mini](https://www.itead.cc/sonoff-mini.html) | [Sonoff Pow R2](https://www.itead.cc/sonoff-pow-r2.html) | [Sonoff Pow R2](https://www.itead.cc/sonoff-pow-r2.html) |
-|:-------------:|:-------------:|:-------------:||:-------------:|
+| Tables        | Are           | Cool  | Cool  |
+| ------------- |:-------------:| -----:| -----:|
+| col 3 is      | right-aligned | $1600 | $1600 |
 
 
 
