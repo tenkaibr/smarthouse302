@@ -34,14 +34,13 @@ I am running Home Assistant within Hass.io on an Raspberry Pi B+.
 
 ### My Custom cards on Home Assistant
 
-1. [markdown Mod](https://github.com/thomasloven/lovelace-markdown-mod)
-2. [Atomic Calendar](https://github.com/atomic7777/atomic_calendar)
-3. card-tools
-button-card.js
-popup-card
-
-[Radial Menu](https://github.com/custom-cards/radial-menu) - Provides a radial menu on click for quick/space saving access to commands. 
-layout-card
+1. [Markdown Mod](https://github.com/thomasloven/lovelace-markdown-mod) - Makes the built-in markdown card better.
+2. [Atomic Calendar](https://github.com/atomic7777/atomic_calendar) - Advanced calendar card for Home Assistant with Lovelace.
+3. [Card-tools](https://github.com/thomasloven/lovelace-card-tools) - Collection of tools to simplify creating custom cards 
+4. [Button-card](https://github.com/custom-cards/button-card) - Lovelace Button card for your entities.
+5. [Popup-card](https://github.com/thomasloven/lovelace-popup-card) - Replace the more-info dialog of one entity with a custom lovelace card
+6. [Radial Menu](https://github.com/custom-cards/radial-menu) - Provides a radial menu on click for quick/space saving access to commands. 
+7. [Layout-card](https://github.com/thomasloven/lovelace-layout-card) - Gives more control over the placement of lovelace cards
 
 ### Automation Overview
 Typical Automations in use include
