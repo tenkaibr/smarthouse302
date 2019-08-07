@@ -136,8 +136,8 @@ Dark:
 
 | [Xiaomi Mijia Smart Multi-functional Gateway](https://www.gearbest.com/living-appliances/pp_344667.html?wid=1433363) | [Sonoff Mini](https://www.itead.cc/sonoff-mini.html) |
 |:-------------:|:-------------:|
-| <p align="center"><img width="200" src="/images/HS200.jpg"></p> | <p align="center"><img width="200" src="/images/sonoff.jpg"></p> |
-| U$27.99 | U$8.49 | U$14.00 |
+| <p align="center"><img width="200" src="/images/xiaomi-gateway.jpg"></p> | <p align="center"><img width="200" src="/images/broadlink.jpg"></p> |
+| U$27.99 | U$38.78 |
 
 
 Xiaomi Mijia Smart Multi-functional Gateway 
