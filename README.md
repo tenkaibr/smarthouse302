@@ -148,10 +148,10 @@ Dark:
 
 ### Sensors
 
-|[Aqara Motion Sensor](https://www.gearbest.com/alarm-systems/pp_659226.html?wid=1433363)| Xiaomi Door Windows Sensor | Aqara WSDCGQ11LM Temperature Humidity Sensor |
+|[Aqara Motion Sensor](https://www.gearbest.com/alarm-systems/pp_659226.html?wid=1433363)| [Xiaomi Door Windows Sensor](https://www.gearbest.com/smart-light-bulb/pp_257677.html?wid=1433363) | [Aqara Temperature Humidity](https://www.gearbest.com/access-control/pp_626702.html?wid=1433363) |
 |:-------------:|:-------------:|:-------------:|
-| <p align="center"><img width="200" src="/images/motion-sensor.jpg"></p> | right-aligned | $1600 |
-| U$14.99 | right-aligned | $1600 |
+| <p align="center"><img width="200" src="/images/motion-sensor.jpg"></p> | <p align="center"><img width="200" src="/images/window-sensor.jpg"></p> | <p align="center"><img width="200" src="/images/temperature-sensor.jpg"></p> |
+| U$14.99 | U$10.87 | U$13.99 |
 
 
 # To Do List
