@@ -82,7 +82,11 @@ Note: Private information is stored in secrets.yaml (not uploaded)
 10. Controle por voz.
 11. Higienização do mictório do pet.
 
-## Theme
+### Screenshots
+
+![Screenshots 01](/images/screenshots-01.jpg)
+![Screenshots 02](/images/screenshots-02.jpg)
+![Screenshots 03](/images/screenshots-03.jpg)
 
 ~~~~
 Dark:
