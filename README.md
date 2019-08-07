@@ -67,9 +67,14 @@ I am running Home Assistant within Hass.io on an Raspberry Pi B+.
 7. [MQTT](https://www.home-assistant.io/components/mqtt/) - MQTT (aka MQ Telemetry Transport) is a machine-to-machine or “Internet of Things” connectivity protocol on top of TCP/IP. It allows extremely lightweight publish/subscribe messaging transport.
 8. [Xiaomi Mi Robot Vacuum](https://www.home-assistant.io/components/vacuum.xiaomi_miio/) - The xiaomi_miio vacuum platform allows you to control the state of your Xiaomi Mi Robot Vacuum. <span style="color:red">TO DO</span>.
 
-### Automations
+### Automations (to do list)
 
 1. Send notification if new Home Assistant release through HTLM5 and creates a persistent notification.
+2. Ceiling Fan control via Broadlink RM Pro.
+3. Living Room TV control via Broadlink RM Pro.
+4. Daily Automatic Cleaning when nobody is home via Xiaomi Roborock Robot Vacuum Cleaner 2
+5. Turn on Entryway light for 10 minutes once I get home (and its dark).
+6. AC Split System control via Broadlink RM Pro.
 
 # Theme
 
