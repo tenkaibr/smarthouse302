@@ -27,10 +27,10 @@ I am running Home Assistant within Hass.io on an Raspberry Pi B+.
 
 ### Add-ons running on my Home Assistant (Hass.io) instance
 
-1. DuckDNS - For keeping my SSL certificate validated through Let's Encrypt.
-2. Mosquitto Broker - For managing my Sonoff devices and any future MQTT devices.
-3. Samba Share - For exploring the config files from a Windows computer.
-4. Spotify Connect (to do).
+1. [DuckDNS](https://www.home-assistant.io/addons/duckdns/) - For keeping my SSL certificate validated through Let's Encrypt.
+2. [Mosquitto Broker](https://www.home-assistant.io/addons/mosquitto/) - For managing my Sonoff devices and any future MQTT devices.
+3. [Samba](https://www.home-assistant.io/addons/samba/) - For exploring the config files from a Windows computer.
+4. [Spotify Connect](https://community.home-assistant.io/t/community-hass-io-add-on-spotify-connect/61210/1) (to do) - Play Spotify music on your Home Assistant device..
 
 ### My Custom cards on Home Assistant
 
