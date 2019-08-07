@@ -139,8 +139,6 @@ Dark:
 | <p align="center"><img width="200" src="/images/xiaomi-gateway.jpg"></p> | <p align="center"><img width="200" src="/images/broadlink.jpg"></p> |
 | U$27.99 | U$38.78 |
 
-
-Xiaomi Mijia Smart Multi-functional Gateway 
 ### Switches
 
 | [TP-Link HS200](https://www.tp-link.com/la/home-networking/smart-switch/hs200/) | [Sonoff Mini](https://www.itead.cc/sonoff-mini.html) | [Sonoff Pow R2](https://www.itead.cc/sonoff-pow-r2.html) |
@@ -148,10 +146,12 @@ Xiaomi Mijia Smart Multi-functional Gateway
 | <p align="center"><img width="200" src="/images/HS200.jpg"></p> | <p align="center"><img width="200" src="/images/sonoff.jpg"></p> | <p align="center"><img width="200" src="/images/sonoff-pow.jpg"></p> |
 | U$22.99 | U$8.49 | U$14.00 |
 
-
-### Lighting
-
 ### Sensors
+
+| [TP-Link HS200](https://www.tp-link.com/la/home-networking/smart-switch/hs200/) | [Sonoff Mini](https://www.itead.cc/sonoff-mini.html) | [Sonoff Pow R2](https://www.itead.cc/sonoff-pow-r2.html) | [Sonoff Pow R2](https://www.itead.cc/sonoff-pow-r2.html) |
+|:-------------:|:-------------:|:-------------:||:-------------:|
+| <p align="center"><img width="200" src="/images/HS200.jpg"></p> | <p align="center"><img width="200" src="/images/sonoff.jpg"></p> | <p align="center"><img width="200" src="/images/sonoff-pow.jpg"></p> |
+| U$22.99 | U$8.49 | U$14.00 |
 
 
 # To Do List
