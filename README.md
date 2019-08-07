@@ -90,6 +90,8 @@ Note: Private information is stored in secrets.yaml (not uploaded)
  <img width="250" src="/images/screenshots-03.jpg">
 </p>
 
+# Theme
+
 ~~~~
 Dark:
 
@@ -142,6 +144,7 @@ Dark:
 ~~~~
 
 # Devices
+
 Hubs
 
 # Lighting
