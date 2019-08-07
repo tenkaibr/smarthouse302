@@ -1,0 +1,1946 @@
+title: Smarthouse 302
+resources:
+  - url: /local/card-tools.js?v=1.495
+    type: js
+  - url: /local/button-card.js?v=1.75
+    type: module
+  - url: /local/mini-media-player-bundle.js?v=0.9.2
+    type: module
+  - url: /local/popup-card.js?v=11.4.1
+    type: js  
+  - url: /local/atomic_calendar.js?v=8.3.2
+    type: module
+  - url: /local/radial-menu.js
+    type: module
+  - url: /local/layout-card.js?v=4.9.2
+    type: js
+  - url: /local/markdown-mod.js?v=0.1
+    type: module
+
+button_card_templates:
+
+  general:
+    show_name: true
+    show_state: false
+    show_icon: false
+    show_units: false
+    show_label: false
+    show_entity_picture: true    
+    styles:
+      card:
+        - height: 6em
+        - padding: 5px 15px
+        - background-color: primary-color
+      name:
+        - justify-self: center
+        - font-weight: bold
+      label:
+        - text-transform: uppercase
+        - color: var(--primary-background-color)
+        - justify-self: start
+        - font-weight: bold
+      grid:
+        - grid-template-areas: '"l" "i" "n" "s"'
+        - grid-template-rows: min-content 1fr min-content min-content
+        - grid-template-columns: 1fr
+
+  unique:
+    template: general
+    tap_action:
+      action: more-info
+     
+  lights:
+    template: general
+    tap_action:
+      action: toggle
+    state:
+      - value: 'on'
+        entity_picture: /local/icons/lightbulb-on.png
+        styles:      
+          name:
+            - color: "#d3d3d3"        
+      - value: 'off'
+        entity_picture: /local/icons/lightbulb-off.png
+        styles:      
+          name:
+            - color: "#3d3d3d"   
+                      
+  blinds:
+    template: general
+    tap_action:
+      action: toggle
+    state:
+      - value: 'on'
+        entity_picture: /local/icons/blinds-open.png
+      - value: 'off'
+        entity_picture: /local/icons/blinds-closed.png
+
+  fans:
+    template: general
+    tap_action:
+      action: toggle
+    state:
+      - value: 'on'
+        entity_picture: /local/icons/fan-on.gif
+        styles:      
+          name:
+            - color: "#d3d3d3"  
+      - value: 'off'
+        entity_picture: /local/icons/fan-off.png
+        styles:      
+          name:
+            - color: "#3d3d3d"
+
+  air:
+    template: general
+    tap_action:
+      action: toggle
+    state:
+      - value: 'on'
+        entity_picture: /local/icons/air_conditioner_on.png
+        styles:      
+          name:
+            - color: "#d3d3d3"
+      - value: 'off'
+        entity_picture: /local/icons/air_conditioner_off.png
+        styles:      
+          name:
+            - color: "#3d3d3d"
+
+  music:
+    template: general
+    tap_action:
+      action: toggle
+    state:
+      - value: 'on'
+        entity_picture: /local/icons/music-on.png
+        styles:      
+          name:
+            - color: "#d3d3d3"
+      - value: 'off'
+        entity_picture: /local/icons/music-off.png
+        styles:      
+          name:
+            - color: "#3d3d3d"
+
+  remote_control:
+    template: general
+    tap_action:
+      action: toggle
+    state:
+      - value: 'on'
+        entity_picture: /local/icons/remote-control-on.png
+        styles:      
+          name:
+            - color: "#d3d3d3"
+      - value: 'off'
+        entity_picture: /local/icons/remote-control-off.png
+        styles:      
+          name:
+            - color: "#3d3d3d"
+
+  mirrow:
+    template: general
+    tap_action:
+      action: toggle
+    state:
+      - value: 'on'
+        entity_picture: /local/icons/mirror_on.png
+        styles:      
+          name:
+            - color: "#d3d3d3"
+      - value: 'off'
+        entity_picture: /local/icons/mirror_off.png
+        styles:      
+          name:
+            - color: "#3d3d3d"
+            
+  button:
+    show_name: true
+    tap_action:
+      action: toggle
+    styles:
+      card:
+        - height: 5.5em
+        - background-color: primary-color        
+      name:
+        - color: "#d3d3d3"
+        - justify-self: center
+        - font-weight: bold
+
+  button2:
+    show_name: false
+    tap_action:
+      action: toggle
+    styles:
+      card:
+        - height: 2.8em
+        - background-color: primary-color        
+
+  button3:
+    show_name: true
+    show_icon: false
+    tap_action:
+      action: toggle
+    styles:
+      card:
+        - height: 2.8em
+        - background-color: primary-color 
+
+  button4:
+    show_name: true
+    show_icon: false
+    tap_action:
+      action: toggle
+    styles:
+      card:
+        - height: 1.8em
+        - background-color: primary-color         
+
+popup_cards:
+
+# CONTROLE REMOTO TV DA SALA #
+
+  input_boolean.controle_remoto_sala_tv:
+    title: Controle Remoto - TV
+    style:
+    card: 
+      type: vertical-stack
+      cards:
+        - type: horizontal-stack  
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_power_on_off
+              template: button
+              icon: mdi:power
+              name: TV          
+              styles:
+                card:
+                  - background-color: red
+            - type: "custom:button-card"
+              color_type: blank-card                 
+            - type: "custom:button-card"
+              entity: script.tv_source
+              template: button
+              icon: mdi:cellphone-link
+              name: Source    
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_number_1
+              template: button2
+              icon: mdi:numeric-1-box
+            - type: "custom:button-card"
+              entity: script.tv_number_2
+              template: button2
+              icon: mdi:numeric-2-box
+            - type: "custom:button-card"
+              entity: script.tv_number_3
+              template: button2
+              icon: mdi:numeric-3-box
+            - type: "custom:button-card"
+              entity: script.tv_volume_up
+              template: button2
+              icon: mdi:volume-plus
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_number_4
+              template: button2
+              icon: mdi:numeric-4-box
+            - type: "custom:button-card"
+              entity: script.tv_number_5
+              template: button2
+              icon: mdi:numeric-5-box
+            - type: "custom:button-card"
+              entity: script.tv_number_6
+              template: button2
+              icon: mdi:numeric-6-box
+            - type: "custom:button-card"
+              entity: script.tv_volume_mute
+              template: button2              
+              icon: mdi:volume-off
+             
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_number_7
+              template: button2
+              icon: mdi:numeric-7-box
+            - type: "custom:button-card"
+              entity: script.tv_number_8
+              template: button2
+              icon: mdi:numeric-8-box
+            - type: "custom:button-card"
+              entity: script.tv_number_9
+              template: button2
+              icon: mdi:numeric-9-box
+            - type: "custom:button-card"
+              entity: script.tv_volume_down
+              template: button2                
+              icon: mdi:volume-minus
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_underline
+              template: button3
+              name: _
+            - type: "custom:button-card"
+              entity: script.tv_number_0
+              template: button2
+              icon: mdi:numeric-0-box
+            - type: "custom:button-card"
+              entity: script.tv_prech
+              template: button3
+              name: Pre-CH
+            - type: "custom:button-card"
+              entity: script.tv_ch_up
+              template: button3
+              name: CH+
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_emanual
+              template: button3
+              name: E-Manual
+            - type: "custom:button-card"
+              entity: script.tv_status
+              template: button3
+              name: Status
+            - type: "custom:button-card"
+              entity: script.tv_more
+              template: button3
+              name: More
+            - type: "custom:button-card"
+              entity: script.tv_chlist
+              template: button3
+              name: CH List
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_soccer
+              template: button2
+              icon: mdi:soccer
+            - type: "custom:button-card"
+              entity: script.tv_volume_mute
+              template: button3
+              name: Mute
+            - type: "custom:button-card"
+              entity: script.tv_source
+              template: button3
+              name: Source
+            - type: "custom:button-card"
+              entity: script.tv_ch_down
+              template: button3
+              name: CH-
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_menu
+              template: button
+              icon: mdi:menu             
+              name: Menu
+            - type: "custom:button-card"
+              entity: script.tv_smart_tv
+              template: button
+              icon: mdi:menu-up
+              name: Smart TV
+              show_entity_picture: true
+              entity_picture: /local/icons/smart-tv.png
+            - type: "custom:button-card"
+              entity: script.tv_guide
+              template: button
+              icon: mdi:television-guide
+              name: Guide
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_tools
+              template: button
+              icon: mdi:toolbox             
+              name: Tools
+            - type: "custom:button-card"
+              entity: script.tv_menu_up
+              template: button
+              icon: mdi:menu-up
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.tv_info
+              template: button
+              icon: mdi:information-outline
+              name: Info
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_menu_left
+              template: button
+              icon: mdi:menu-left
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.tv_ok
+              template: button                    
+              name: "OK"
+              show_name: true
+              show_icon: false
+            - type: "custom:button-card"
+              entity: script.tv_menu_right
+              template: button
+              icon: mdi:menu-right
+              show_name: false              
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_back
+              template: button
+              icon: mdi:keyboard-return              
+              name: Return
+            - type: "custom:button-card"
+              entity: script.tv_menu_down
+              template: button
+              icon: mdi:menu-down
+              show_name: false              
+            - type: "custom:button-card"
+              entity: script.tv_exit
+              template: button
+              icon: mdi:exit-to-app              
+              name: Exit
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_a
+              template: button4
+              name: A
+              styles:              
+                card:
+                  - background-color: red
+            - type: "custom:button-card"
+              entity: script.tv_b
+              template: button4
+              name: B
+              styles:              
+                card:
+                  - background-color: green                      
+            - type: "custom:button-card"
+              entity: script.tv_c
+              template: button4
+              name: C
+              styles:              
+                card:
+                  - background-color: yellow
+            - type: "custom:button-card"
+              entity: script.tv_d
+              template: button4
+              name: D
+              styles:              
+                card:
+                  - background-color: blue
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_rewind
+              template: button2
+              icon: mdi:rewind
+            - type: "custom:button-card"
+              entity: script.tv_pause
+              template: button2
+              icon: mdi:pause
+            - type: "custom:button-card"
+              entity: script.tv_fast_forward
+              template: button2
+              icon: mdi:fast-forward
+            - type: "custom:button-card"
+              entity: script.tv_record_rec
+              template: button2                
+              icon: mdi:record
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_stop
+              template: button2
+              icon: mdi:stop
+            - type: "custom:button-card"
+              entity: script.tv_play
+              template: button2
+              icon: mdi:play
+            - type: "custom:button-card"
+              entity: script.tv_history
+              template: button3
+              name: History
+            - type: "custom:button-card"
+              entity: script.tv_button_d
+              template: button3
+              name: D
+
+# CONTROLE REMOTO HTV DA SALA #
+
+  input_boolean.controle_remoto_sala_htv:
+    title: Controle Remoto - HTV
+    style:
+    card: 
+      type: vertical-stack
+      cards:
+        - type: horizontal-stack  
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_power_on_off
+              template: button
+              icon: mdi:power
+              name: TV          
+              styles:
+                card:
+                  - background-color: red
+            - type: "custom:button-card"
+              entity: script.tv_source
+              template: button
+              icon: mdi:cellphone-link
+              name: Source    
+            - type: "custom:button-card"
+              entity: script.htv_power_on_off
+              template: button
+              icon: mdi:power
+              name: HTV
+              styles:              
+                card:
+                  - background-color: red
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_number_1
+              template: button2
+              icon: mdi:numeric-1-box
+            - type: "custom:button-card"
+              entity: script.htv_number_2
+              template: button2
+              icon: mdi:numeric-2-box
+            - type: "custom:button-card"
+              entity: script.htv_number_3
+              template: button2
+              icon: mdi:numeric-3-box
+            - type: "custom:button-card"
+              entity: script.htv_volume_up
+              template: button2
+              icon: mdi:volume-plus
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_number_4
+              template: button2
+              icon: mdi:numeric-4-box
+            - type: "custom:button-card"
+              entity: script.htv_number_5
+              template: button2
+              icon: mdi:numeric-5-box
+            - type: "custom:button-card"
+              entity: script.htv_number_6
+              template: button2
+              icon: mdi:numeric-6-box
+            - type: "custom:button-card"
+              entity: script.htv_volume_mute
+              template: button2              
+              icon: mdi:volume-off
+             
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_number_7
+              template: button2
+              icon: mdi:numeric-7-box
+            - type: "custom:button-card"
+              entity: script.htv_number_8
+              template: button2
+              icon: mdi:numeric-8-box
+            - type: "custom:button-card"
+              entity: script.htv_number_9
+              template: button2
+              icon: mdi:numeric-9-box
+            - type: "custom:button-card"
+              entity: script.htv_volume_down
+              template: button2                
+              icon: mdi:volume-minus
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_period
+              template: button3
+              name: .
+            - type: "custom:button-card"
+              entity: script.htv_number_0
+              template: button2
+              icon: mdi:numeric-0-box
+            - type: "custom:button-card"
+              entity: script.htv_del
+              template: button3
+              name: Del
+            - type: "custom:button-card"
+              entity: script.htv_goto
+              template: button3
+              name: Goto
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_ok
+              template: button
+              icon: mdi:menu             
+              name: Menu
+            - type: "custom:button-card"
+              entity: script.htv_menu_up
+              template: button
+              icon: mdi:menu-up
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.htv_exit
+              template: button
+              icon: mdi:exit-to-app              
+              name: Exit
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_menu_left
+              template: button
+              icon: mdi:menu-left
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.htv_ok
+              template: button                    
+              name: "OK"
+              show_name: true
+              show_icon: false               
+            - type: "custom:button-card"
+              entity: script.htv_menu_right
+              template: button
+              icon: mdi:menu-right
+              show_name: false              
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_home
+              template: button
+              icon: mdi:home              
+              name: Home
+            - type: "custom:button-card"
+              entity: script.htv_menu_down
+              template: button
+              icon: mdi:menu-down
+              show_name: false              
+            - type: "custom:button-card"
+              entity: script.htv_info
+              template: button
+              icon: mdi:information-outline
+              name: Info
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_p_minus
+              template: button3
+              name: P -
+            - type: "custom:button-card"
+              entity: script.htv_p_plus
+              template: button3
+              name: P +
+            - type: "custom:button-card"
+              entity: script.htv_mouse
+              template: button2                 
+              icon: mdi:mouse
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_favorite
+              template: button4
+              name: Favoritar
+              styles:              
+                card:
+                  - background-color: red
+            - type: "custom:button-card"
+              entity: script.htv_order
+              template: button4
+              name: Ordenar
+              styles:              
+                card:
+                  - background-color: green                      
+            - type: "custom:button-card"
+              entity: script.htv_block
+              template: button4
+              name: Bloquear
+              styles:              
+                card:
+                  - background-color: yellow
+            - type: "custom:button-card"
+              entity: script.htv_back
+              template: button4
+              name: Voltar
+              styles:              
+                card:
+                  - background-color: blue
+
+# CONTROLE REMOTO FAVORITO DA SALA #
+
+  input_boolean.controle_remoto_sala_favoritos:
+    title: Controle Remoto - Geral
+    style:
+    card: 
+      type: vertical-stack
+      cards:
+        - type: horizontal-stack  
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_power_on_off
+              template: button
+              icon: mdi:power
+              name: TV          
+              styles:
+                card:
+                  - background-color: red
+            - type: "custom:button-card"
+              entity: script.controle_tv_sala_seta_cima
+              template: button
+              name: Energia
+              show_entity_picture: true
+              entity_picture: /local/icons/energy-on.png
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/energy-on.png
+                - value: 'off'
+                  entity_picture: /local/icons/energy-off.png
+            - type: "custom:button-card"
+              entity: script.htv_power_on_off
+              template: button
+              icon: mdi:power
+              name: HTV
+              styles:              
+                card:
+                  - background-color: red
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_volume_down
+              template: button2                
+              icon: mdi:volume-minus
+            - type: "custom:button-card"
+              entity: script.tv_volume_mute
+              template: button2              
+              icon: mdi:volume-off
+            - type: "custom:button-card"
+              entity: script.tv_volume_up
+              template: button2
+              icon: mdi:volume-plus
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_ok
+              template: button
+              icon: mdi:menu             
+              name: Menu
+            - type: "custom:button-card"
+              entity: script.htv_menu_up
+              template: button
+              icon: mdi:menu-up
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.htv_info
+              template: button
+              icon: mdi:information-outline
+              name: Info
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_menu_left
+              template: button
+              icon: mdi:menu-left
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.htv_ok
+              template: button                    
+              name: "OK"
+              show_name: true
+              show_icon: false               
+            - type: "custom:button-card"
+              entity: script.htv_menu_right
+              template: button
+              icon: mdi:menu-right
+              show_name: false              
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_home
+              template: button
+              icon: mdi:home              
+              name: Home
+            - type: "custom:button-card"
+              entity: script.htv_menu_down
+              template: button
+              icon: mdi:menu-down
+              show_name: false              
+            - type: "custom:button-card"
+              entity: script.htv_exit
+              template: button
+              icon: mdi:exit-to-app              
+              name: Exit
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              color_type: blank-card
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_source
+              template: button
+              icon: mdi:cellphone-link
+              name: Source
+            - type: "custom:button-card"
+              entity: script.tv_smart_tv
+              template: button
+              icon: mdi:menu-up
+              name: Smart TV
+              show_entity_picture: true
+              entity_picture: /local/icons/smart-tv.png          
+            - type: "custom:button-card"
+              entity: script.tv_menu
+              template: button
+              icon: mdi:menu             
+              name: Menu
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_tools
+              template: button
+              icon: mdi:toolbox             
+              name: Tools
+            - type: "custom:button-card"
+              entity: script.tv_menu_up
+              template: button
+              icon: mdi:menu-up
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.tv_info
+              template: button
+              icon: mdi:information-outline
+              name: Info
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_menu_left
+              template: button
+              icon: mdi:menu-left
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.tv_ok
+              template: button                    
+              name: "OK"
+              show_name: true
+              show_icon: false
+            - type: "custom:button-card"
+              entity: script.tv_menu_right
+              template: button
+              icon: mdi:menu-right
+              show_name: false              
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_back
+              template: button
+              icon: mdi:keyboard-return              
+              name: Return
+            - type: "custom:button-card"
+              entity: script.tv_menu_down
+              template: button
+              icon: mdi:menu-down
+              show_name: false              
+            - type: "custom:button-card"
+              entity: script.tv_exit
+              template: button
+              icon: mdi:exit-to-app              
+              name: Exit
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              color_type: blank-card
+
+# CONTROLE REMOTO AR CONDICIONADO DA SALA #
+
+  input_boolean.controle_remoto_sala_ar:
+    title: Ar Condicionado - Sala
+    style:
+    card:  
+      type: vertical-stack
+      cards:
+        - type: entities
+          entities:
+          - entity: sensor.temperature_158d0003499a36
+            name: Temperatura da sala   
+        - type: horizontal-stack  
+          cards:               
+          - type: "custom:button-card"
+            entity: 
+            action: toggle
+            icon: mdi:power
+            name: On/OFF                  
+            style:
+              - background-color: red
+              - height: 6em
+              - --disabled-text-color: white
+              - font-weight: bold
+          - type: "custom:button-card"
+            color_type: blank-card
+          - type: "custom:button-card"
+            color_type: blank-card
+
+        - type: horizontal-stack  
+          cards:               
+          - type: "custom:button-card"
+            entity: 
+            action: toggle
+            icon: mdi:airplay
+            name: Modo                 
+            style:
+              - height: 8em
+              - --disabled-text-color: white
+              - font-weight: bold
+              - font-size: 10px                  
+          - type: "custom:button-card"
+            entity: 
+            action: toggle
+            icon: mdi:fan
+            name: Velocidade                
+            style:
+              - height: 8em
+              - --disabled-text-color: white
+              - font-weight: bold
+              - font-size: 10px                  
+          - type: "custom:button-card"
+            entity: 
+            action: toggle
+            icon: mdi:arrow-up-bold-circle
+            name: Aumentar                
+            style:
+              - height: 8em
+              - --disabled-text-color: white
+              - font-weight: bold
+              - font-size: 10px
+
+        - type: horizontal-stack  
+          cards:               
+          - type: "custom:button-card"
+            entity: 
+            action: toggle
+            icon: mdi:clock-outline
+            name: Timer                 
+            style:
+              - height: 8em
+              - --disabled-text-color: white
+              - font-weight: bold
+              - font-size: 10px                  
+          - type: "custom:button-card"
+            entity: 
+            action: toggle
+            icon: mdi:lightbulb
+            name: Apagar                
+            style:
+              - height: 8em
+              - --disabled-text-color: white
+              - font-weight: bold
+              - font-size: 10px               
+          - type: "custom:button-card"
+            entity: 
+            action: toggle
+            icon: mdi:arrow-down-bold-circle
+            name: Diminuir               
+            style:
+              - height: 8em
+              - --disabled-text-color: white
+              - font-weight: bold
+              - font-size: 10px
+
+        - type: horizontal-stack  
+          cards:
+          - type: "custom:button-card"
+            color_type: blank-card
+
+# CONTROLE DO PC #
+
+  binary_sensor.my_computer_connected:
+    title: Controle do PC
+    style:
+    card: 
+      type: vertical-stack
+      cards:
+        - type: entities
+          entities:
+          - entity: switch.sonoff_pow_r2_2
+            name: Energia
+            tap_action: toggle
+          - entity: binary_sensor.my_computer_connected
+            name: Computador            
+          - entity: sensor.my_computer_current_user
+            name: Usuário
+
+        - type: horizontal-stack  
+          cards:
+            - type: "custom:button-card"
+              entity: switch.my_computer
+              template: button
+              show_entity_picture: true
+              entity_picture: /local/icons/shutdown.png
+              name: Ligar/Desligar         
+              styles:
+                card:
+                  - background-color: red
+            - type: "custom:button-card"
+              entity: script.my_computer_reboot
+              template: button
+              name: Reiniciar
+              show_entity_picture: true
+              entity_picture: /local/icons/reboot.png
+            - type: "custom:button-card"
+              entity: script.my_computer_suspend
+              template: button
+              name: Suspender
+              show_entity_picture: true
+              entity_picture: /local/icons/suspend.png
+
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              entity: script.my_computer_displays_off
+              template: button
+              name: Display OFF
+              show_entity_picture: true
+              entity_picture: /local/icons/display-off.png
+            - type: "custom:button-card"
+              entity: script.my_computer_displays_on
+              template: button
+              name: Display ON
+              show_entity_picture: true
+              entity_picture: /local/icons/display-on.png
+            - type: "custom:button-card"
+              entity: script.my_computer_refresh
+              template: button
+              name: Atualizar
+              show_entity_picture: true
+              entity_picture: /local/icons/refresh.png
+
+
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              entity: script.my_computer_logoff
+              template: button
+              name: Logoff
+              show_entity_picture: true
+              entity_picture: /local/icons/logoff.png              
+            - type: "custom:button-card"
+              entity: script.my_computer_lock
+              template: button
+              name: Bloquear
+              show_entity_picture: true
+              entity_picture: /local/icons/block.png         
+
+
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              entity: script.my_computer_vol_mute
+              template: button
+              name: Silenciar
+              show_entity_picture: true
+              entity_picture: /local/icons/volume-mute.png
+            - type: "custom:button-card"
+              entity: script.controle_tv_sala_seta_cima
+              template: button
+              name: Volume 25%
+              show_entity_picture: true
+              entity_picture: /local/icons/volume-25.png
+            - type: "custom:button-card"
+              entity: script.controle_tv_sala_seta_cima
+              template: button
+              name: Volume 50%
+              show_entity_picture: true
+              entity_picture: /local/icons/volume-50.png
+        - type: horizontal-stack
+          cards:              
+            - type: "custom:button-card"
+              entity: script.controle_tv_sala_seta_cima
+              template: button
+              name: Volume 75%
+              show_entity_picture: true
+              entity_picture: /local/icons/volume-75.png
+            - type: "custom:button-card"
+              entity: script.my_computer_vol_max
+              template: button
+              name: Volume 100%
+              show_entity_picture: true
+              entity_picture: /local/icons/volume-100.png
+            - type: "custom:button-card"
+              entity: script.my_computer_notify
+              template: button
+              name: Notificar
+              show_entity_picture: true
+              entity_picture: /local/icons/notify.png  
+
+# PRIMEIRA ABA #
+views:
+  - title: Principal
+    background: center / cover no-repeat url("/local/background/background-1.jpg") fixed
+    icon: mdi:apps
+    cards:
+      - type: markdown
+        content: |
+          ## Bem vindo(a) [[ {user} ]]
+
+          Hoje é [[ sensor.date_long ]], e o dia está [[ sensor.dark_sky_summary ]].
+
+          Status da casa [@smarthouse302](https://www.instagram.com/smarthouse302/) :
+
+          - [[ if(group.doors == "off", "As portas e janelas estão <font color="green">**fechadas**</font>.", "Alguma porta ou janela está **aberta**</font>.") ]]
+          - [[ if(group.all_lights == "off", "As luzes estão <font color="green">**apagadas**</font>.", "Alguma luz está <font color="red">**acesa**</font>.") ]]
+          - [[ if(group.electronics == "off", "Os eletrodomésticos estão <font color="green">**desligados**</font>.", "Algum eletrodoméstico está <font color="red">**ligado**</font>.") ]]        
+
+      - type: "custom:atomic-calendar"
+        title: "Agenda"   
+        entities:
+        - calendar.smarthouse302_gmail_com
+        - calendar.contacts
+        noEventsForNextDaysText: 'Sem eventos para os próximos dias.'
+        noEventsForTodayText: 'Sem eventos para hoje.'
+        fullDayEventText: 'O dia todo'
+        untilText: 'até'
+        showProgressBar: false
+
+      - type: shopping-list
+        title: Lista de Compras
+
+      - type: weather-forecast
+        entity: weather.dark_sky
+
+      - type: iframe
+        url: https://embed.windy.com/embed2.html?lat=-22.880&lon=-43.288&zoom=10&level=surface&overlay=radar&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=-22.886&detailLon=-43.242&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1
+        aspect_ratio: 75%
+
+
+# SEGUNDA ABA #
+
+  - title: Home
+    background: center / cover no-repeat url("/local/background/background-1.jpg") fixed
+    icon: mdi:home
+    panel: true
+    cards:
+      - type: custom:layout-card
+        layout: vertical
+        cards:
+
+  # SALA E COZINHA #
+
+          - type: picture-entity
+            image: /local/house/kitchen.jpg
+            entity: group.kitchen
+            action: none
+            show_state: false
+            show_name: false
+
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: lights
+              name: Sala
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: lights
+              name: Cozinha
+              hold_action:
+                action: more-info
+                entity: input_boolean.controle_remoto_sala_ar
+
+
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: unique
+              name: Mesa
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/ceiling-light-on.png
+                  styles:      
+                    name:
+                      - color: "#d3d3d3"                  
+                - value: 'off'
+                  entity_picture: /local/icons/ceiling-light-off.png
+                  styles:      
+                    name:
+                      - color: "#3d3d3d"
+
+          - type: horizontal-stack
+            cards: 
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: unique
+              name: Bancada     
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/spot-on.png
+                  styles:      
+                    name:
+                      - color: "#d3d3d3"                  
+                - value: 'off'
+                  entity_picture: /local/icons/spot-off.png
+                  styles:      
+                    name:
+                      - color: "#3d3d3d"
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: unique
+              name: Sanca
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/wall-sconce-flat-on.png
+                  styles:      
+                    name:
+                      - color: "#d3d3d3"                  
+                - value: 'off'
+                  entity_picture: /local/icons/wall-sconce-flat-off.png
+                  styles:      
+                    name:
+                      - color: "#3d3d3d"
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: blinds
+              name: Cortina
+                       
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: fans
+              name: Ventilador
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: air
+              name: Ar Condicionado
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala
+              template: music
+              name: Música
+
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: unique
+              name: Aspirador
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/cleaner-on.png
+                  styles:      
+                    name:
+                      - color: "#d3d3d3"                  
+                - value: 'off'
+                  entity_picture: /local/icons/cleaner-off.png
+                  styles:      
+                    name:
+                      - color: "#3d3d3d"
+
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala
+              template: remote_control
+              name: Controles
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_favoritos
+              template: unique
+              tap_action:
+                action: more-info
+              name: Favoritos
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/favorite-on.png
+                  styles:      
+                    name:
+                      - color: "#d3d3d3"                  
+                - value: 'off'
+                  entity_picture: /local/icons/favorite-on.png
+                  styles:      
+                    name:
+                      - color: "#3d3d3d"
+
+          - type: horizontal-stack
+            cards: 
+              - type: conditional
+                conditions:
+                  - entity: input_boolean.controle_remoto_sala
+                    state: "on"
+                card: 
+                  type: horizontal-stack
+                  cards:                
+                  - type: entity-button
+                    entity: input_boolean.controle_remoto_sala_tv
+                    tap_action:
+                      action: more-info                  
+                    icon: mdi:television-box
+                    name: Controle da TV
+                  - type: entity-button
+                    entity: input_boolean.controle_remoto_sala_htv
+                    tap_action:
+                      action: more-info  
+                    icon: mdi:youtube-tv                
+                    name: Controle do HTV
+
+  # BANHEIROS #
+
+          - type: picture-entity
+            image: /local/house/bathroom.jpg
+            entity: group.bathroom
+            action: none
+            show_state: false
+            show_name: false
+
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: lights
+              name: Banheiro
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: mirrow
+              name: Espelho
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: music
+              name: Música
+
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: lights
+              name: Suíte
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: mirrow
+              name: Espelho
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: music
+              name: Música
+
+          - break
+
+  # SUÍTE #
+
+          - type: picture-entity
+            image: /local/house/suite.jpg
+            entity: group.suite
+            action: none
+            show_state: false
+            show_name: false
+
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: lights
+              name: Suíte
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: lights
+              name: Nichos
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: blinds
+              name: Cortina
+        
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: fans
+              name: Ventilador
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: air
+              name: Ar Condicionado
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala
+              template: music
+              name: Música
+
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala
+              template: remote_control
+              name: Controles
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_favoritos
+              template: unique
+              tap_action:
+                action: more-info
+              name: Favoritos
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/favorite-on.png
+                  styles:      
+                    name:
+                      - color: "#d3d3d3"                  
+                - value: 'off'
+                  entity_picture: /local/icons/favorite-on.png
+                  styles:      
+                    name:
+                      - color: "#3d3d3d"
+            - type: "custom:button-card"
+              color_type: blank-card
+
+          - type: horizontal-stack
+            cards: 
+              - type: conditional
+                conditions:
+                  - entity: input_boolean.controle_remoto_sala
+                    state: "on"
+                card: 
+                  type: horizontal-stack
+                  cards:                
+                  - type: entity-button
+                    entity: input_boolean.controle_remoto_sala_tv
+                    tap_action:
+                      action: more-info                  
+                    icon: mdi:television-box
+                    name: Controle da TV
+                  - type: entity-button
+                    entity: input_boolean.controle_remoto_sala_htv
+                    tap_action:
+                      action: more-info  
+                    icon: mdi:youtube-tv                
+                    name: Controle do HTV
+
+  # QUARTO #
+
+          - type: picture-entity
+            image: /local/house/bedroom.jpg
+            entity: group.bedroom
+            action: none
+            show_state: false
+            show_name: false
+
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: lights
+              name: Quarto
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: unique
+              name: Mesa
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/desk-lamp-on.png
+                  styles:      
+                    name:
+                      - color: "#d3d3d3"                  
+                - value: 'off'
+                  entity_picture: /local/icons/desk-lamp-off.png
+                  styles:      
+                    name:
+                      - color: "#3d3d3d"
+
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: blinds
+              name: Cortina                  
+
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: fans
+              name: Ventilador
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: air
+              name: Ar Condicionado
+            - type: "custom:button-card"            
+              entity: binary_sensor.my_computer_connected
+              template: unique
+              name: Computador
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/pc-on.png
+                  styles:      
+                    name:
+                      - color: "#d3d3d3"                  
+                - value: 'off'
+                  entity_picture: /local/icons/pc-off.png
+                  styles:      
+                    name:
+                      - color: "#3d3d3d"
+
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: music
+              name: Música
+            - type: "custom:button-card"
+              color_type: blank-card
+            - type: "custom:button-card"
+              color_type: blank-card                            
+
+          - break
+
+  # VARANDA E LAVANDERIA #
+
+          - type: picture-entity
+            image: /local/house/laundry-room.jpg
+            entity: group.laundry
+            action: none
+            show_state: false
+            show_name: false
+
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: lights
+              name: Varanda
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: lights
+              name: Lavanderia
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala
+              template: music
+              name: Música
+
+          - type: horizontal-stack
+            cards:
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: general
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/dryer-on.png
+                  styles:      
+                    name:
+                      - color: "#d3d3d3"                  
+                - value: 'off'
+                  entity_picture: /local/icons/dryer-off.png
+                  styles:      
+                    name:
+                      - color: "#3d3d3d"                  
+              name_template: >
+                return '<div align="center">' +
+                          '<div style="font-weight: bold; font-size: 1em;">' + "Máquina" + '</div>' +
+                          '<div style="font-weight: bold; font-size: 1em;">' + "de Lavar" + '</div>' +
+                        '</div>'  
+            - type: "custom:button-card"            
+              entity: input_boolean.controle_remoto_sala_ar
+              template: unique
+              name: Plantas
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/flower-on.png
+                  styles:      
+                    name:
+                      - color: "#d3d3d3"
+                - value: 'off'
+                  entity_picture: /local/icons/flower-off.png
+                  styles:      
+                    name:
+                      - color: "#3d3d3d"
+            - type: "custom:button-card"
+              entity: input_boolean.controle_remoto_sala_ar
+              template: unique
+              name: Pet
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/pet-on.png
+                  styles:      
+                    name:
+                      - color: "#d3d3d3"                  
+                - value: 'off'
+                  entity_picture: /local/icons/pet-off.png
+                  styles:      
+                    name:
+                      - color: "#3d3d3d"
+              
+# TERCEIRA ABA #
+
+  - title: Usuários
+    icon: mdi:account
+    cards: 
+      - type: glance
+        title: Localização
+        entities:
+        - device_tracker.google_maps_105918380959685451254
+        - sensor.phone_battery_gabriel
+        
+      - type: map
+        entities:
+        - device_tracker.google_maps_105918380959685451254
+        - zone.home
+        - zone.unirio
+
+# QUARTA ABA
+
+  - title: "Informa\xE7\xF5es"
+    icon: mdi:tablet
+    cards: 
+      - type: picture-elements
+        image: /local/house/planta.png
+        elements:
+          - type: state-badge
+            entity: sensor.dark_sky_temperature
+            style:
+              top: 12%
+              left: 20%
+          - type: state-icon
+            entity: light.koket
+            tap_action: toggle
+            style:
+              top: 27%
+              left: 34%
+              width: 300px
+              height: 10px
+
+          - type: 'custom:radial-menu'
+            entity_picture: "/local/icons/air_conditioner_tablet.png"   
+            name: 'Home'
+            default_open: true
+            dismiss_default: false
+            hold_action:
+              action: url
+              url: https://www.home-assistant.io
+            items:
+              - entity_picture: '/local/icons/living-room.svg'
+                name: Podcasts
+                tap_action:
+                  action: more-info
+              - entity_picture: '/local/icons/suite.svg'
+                name: Podcasts
+                tap_action:
+                  action: more-info        
+            style:
+              top: 32%
+              left: 20%
+
+# QUINTA ABA
+
+  - title: "Controle da Sala"
+    icon: mdi:remote-tv
+    panel: true
+    cards:
+      - type: custom:layout-card
+        layout: vertical
+        cards:
+        - type: "custom:button-card"
+          color_type: label-card
+          color: rgb(87, 90, 96)
+          name: Controle Remoto da Sala
+          style:
+            - font-size: 12px
+            - font-weight: bold   
+        - type: horizontal-stack  
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_power_on_off
+              template: button
+              icon: mdi:power
+              name: TV          
+              styles:
+                card:
+                  - background-color: red
+            - type: "custom:button-card"
+              entity: script.controle_tv_sala_seta_cima
+              template: button
+              name: Energia
+              show_entity_picture: true
+              entity_picture: /local/icons/energy-on.png
+              state:
+                - value: 'on'
+                  entity_picture: /local/icons/energy-on.png
+                - value: 'off'
+                  entity_picture: /local/icons/energy-off.png
+            - type: "custom:button-card"
+              entity: script.htv_power_on_off
+              template: button
+              icon: mdi:power
+              name: HTV
+              styles:              
+                card:
+                  - background-color: red
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_volume_down
+              template: button2                
+              icon: mdi:volume-minus
+            - type: "custom:button-card"
+              entity: script.htv_volume_mute
+              template: button2              
+              icon: mdi:volume-off
+            - type: "custom:button-card"
+              entity: script.tv_volume_up
+              template: button2
+              icon: mdi:volume-plus
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_ok
+              template: button
+              icon: mdi:menu             
+              name: Menu
+            - type: "custom:button-card"
+              entity: script.htv_menu_up
+              template: button
+              icon: mdi:menu-up
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.htv_info
+              template: button
+              icon: mdi:information-outline
+              name: Info
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_menu_left
+              template: button
+              icon: mdi:menu-left
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.htv_ok
+              template: button                    
+              name: "OK"
+              show_name: true
+              show_icon: false               
+            - type: "custom:button-card"
+              entity: script.htv_menu_right
+              template: button
+              icon: mdi:menu-right
+              show_name: false              
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.htv_home
+              template: button
+              icon: mdi:home              
+              name: Home
+            - type: "custom:button-card"
+              entity: script.htv_menu_down
+              template: button
+              icon: mdi:menu-down
+              show_name: false              
+            - type: "custom:button-card"
+              entity: script.htv_exit
+              template: button
+              icon: mdi:exit-to-app              
+              name: Exit
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              color_type: blank-card
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_source
+              template: button
+              icon: mdi:cellphone-link
+              name: Source
+            - type: "custom:button-card"
+              entity: script.tv_smart_tv
+              template: button
+              icon: mdi:menu-up
+              name: Smart TV
+              show_entity_picture: true
+              entity_picture: /local/icons/smart-tv.png          
+            - type: "custom:button-card"
+              entity: script.tv_menu
+              template: button
+              icon: mdi:menu             
+              name: Menu
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_tools
+              template: button
+              icon: mdi:toolbox             
+              name: Tools
+            - type: "custom:button-card"
+              entity: script.tv_menu_up
+              template: button
+              icon: mdi:menu-up
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.tv_info
+              template: button
+              icon: mdi:information-outline
+              name: Info
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_menu_left
+              template: button
+              icon: mdi:menu-left
+              show_name: false
+            - type: "custom:button-card"
+              entity: script.tv_ok
+              template: button                    
+              name: "OK"
+              show_name: true
+              show_icon: false
+            - type: "custom:button-card"
+              entity: script.tv_menu_right
+              template: button
+              icon: mdi:menu-right
+              show_name: false              
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              entity: script.tv_back
+              template: button
+              icon: mdi:keyboard-return              
+              name: Return
+            - type: "custom:button-card"
+              entity: script.tv_menu_down
+              template: button
+              icon: mdi:menu-down
+              show_name: false              
+            - type: "custom:button-card"
+              entity: script.tv_exit
+              template: button
+              icon: mdi:exit-to-app              
+              name: Exit
+
+        - type: horizontal-stack 
+          cards:
+            - type: "custom:button-card"
+              color_type: blank-card
+
+# SEXTA ABA
+
+  - title: "Controle da Sala"
+    icon: mdi:remote-tv
+    panel: true
+    cards: 
+             
+# SÉTIMA ABA
+    
+  - title: "Configura\xE7\xF5es"
+    icon: mdi:cogs
+    cards:
+      - type: entities
+        title: Informações do Sistema
+        show_header_toggle: false
+        entities:
+          - sensor.processor_use
+          - sensor.memory_use_percent
+          - sensor.disk_use_percent_home
+          - sensor.last_boot
+          - sensor.sistema_temperature
+          - sensor.sistema_humidity
+      - type: entities
+        title: Automações
+        show_header_toggle: true
+        entities:
+          - automation.set_theme_at_startup
+          - automation.turn_on_the_relay          
+      - type: entities
+        title: Dia e Hora
+        show_header_toggle: true
+        entities:
+          - sensor.time
+          - sensor.date
+          - sensor.date_long
+          - sun.sun
+          - sensor.yr_symbol
+
+      - type: media-control
+        entity: media_player.spotify
+      - type: weather-forecast
+        entity: weather.yweather          
+
+      - type: entities
+        title: Boolean
+        show_header_toggle: true
+        entities:
+          - entity: input_boolean.controle_remoto_sala
+            name: Controle Remoto Geral da Sala
+          - entity: input_boolean.controle_remoto_sala_tv
+            name: Controle Remoto da TV da Sala
+          - entity: input_boolean.controle_remoto_sala_htv
+            name: Controle Remoto do HTV da Sala
+          - entity: input_boolean.controle_remoto_sala_ar
+            name: Controle Remoto do Ar Condicionado da Sala
+          - type: divider
+            style:
+              height: 1px
+              width: 80%
+              margin-left: auto
+              margin-right: auto
+              background: '#62717b'        
+          - entity: input_boolean.controle_remoto_quarto_ar
+            name: Controle Remoto do Ar Condicionado do Quarto
+          - entity: input_boolean.controle_remoto_quarto_ventilador
+            name: Controle Remoto do Ventilador do Quarto
+          - type: divider
+            style:
+              height: 1px
+              width: 80%
+              margin-left: auto
+              margin-right: auto
+              background: '#62717b'
+          - entity: input_boolean.controle_remoto_suite
+            name: Controle Remoto Geral da Suíte
+          - entity: input_boolean.controle_remoto_suite_tv
+            name: Controle Remoto da TV da Suíte              
+          - entity: input_boolean.controle_remoto_suite_ar
+            name: Controle Remoto do Ar Condicionado da Suíte
+          - entity: input_boolean.controle_remoto_suite_ventilador
+            name: Controle Remoto do Ventilador da Suíte
+
+      - type: entities
+        title: Baterias
+        show_header_toggle: false
+        entities:        
+          - entity: sensor.door_window_158d0002b7b04b_battery
+          - entity: sensor.door_window_158d0002b7b09f_battery
+          - entity: sensor.door_window_158d0002c668e9_battery
+          - entity: sensor.door_window_158d0002f24f23_battery
+          - entity: sensor.wall_switch_158d00031af6c4_battery
+          - entity: sensor.temperature_158d0003499a36_battery
+          - entity: sensor.temperature_158d000349bf7d_battery
+          - entity: sensor.temperature_158d00034d18b0_battery
