@@ -140,6 +140,13 @@ TP-Link HS200 | Sonoff Mini | Sonoff Pow
 <p align="center"><img width="200" src="/images/HS200.jpg"></p> | <p align="center"><img width="200" src="/images/HS200.jpg"></p>` | <p align="center"><img width="200" src="/images/HS200.jpg"></p>
 U$ | 2 | 3
 
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 ### Lighting
 
 ### Sensors
