@@ -7,12 +7,6 @@ This is my Home Assistant configuration for a small appartment with 7 rooms (liv
 
 Be sure to ⭐️ my configuration repo so you can keep up to date on any daily progress! Don't forget to check out [my blog](https://smarthouse302.blogspot.com/) and [my instagram account](https://www.instagram.com/smarthouse302/)
 
-Use the menu links bellow to jump between sections.
-
-# Menu
-
-Hardware | Hubs | Lighting | Climate| Switches | Locks | Security | Voice Assistant | Media | Sensors | Cameras | Vacuum | Network | Other Hardware | Software | Screenshots |
-
 # General Overview
 This configuration controls a couple of significant features in my smart home.
 
