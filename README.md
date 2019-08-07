@@ -134,7 +134,7 @@ Dark:
 
 ### Hubs
 
-| [Xiaomi Mijia Gateway](https://www.gearbest.com/living-appliances/pp_344667.html?wid=1433363) | [Broadlink RM PRO](https://www.itead.cc/sonoff-mini.html) |
+| [Xiaomi Mijia Gateway](https://www.gearbest.com/living-appliances/pp_344667.html?wid=1433363) | [Broadlink RM PRO](https://www.gearbest.com/smart-home-controls/pp_255607.html) |
 |:-------------:|:-------------:|
 | <p align="center"><img width="200" src="/images/xiaomi-gateway.jpg"></p> | <p align="center"><img width="200" src="/images/broadlink.jpg"></p> |
 | U$27.99 | U$38.78 |
