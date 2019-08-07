@@ -148,10 +148,10 @@ Dark:
 
 ### Sensors
 
-| Tables        | Are           | Cool  | Cool  |
-|:-------------:|:-------------:|:-------------:|:-------------:|
-| col 3 is      | right-aligned | $1600 | $1600 |
-| col 3 is      | right-aligned | $1600 | $1600 |
+|[Aqara Motion Sensor](https://www.gearbest.com/alarm-systems/pp_659226.html?wid=1433363)| Xiaomi Door Windows Sensor | Aqara WSDCGQ11LM Temperature Humidity Sensor |
+|:-------------:|:-------------:|:-------------:|
+| <p align="center"><img width="200" src="/images/motion-sensor.jpg"></p> | right-aligned | $1600 |
+| U$14.99 | right-aligned | $1600 |
 
 
 # To Do List
