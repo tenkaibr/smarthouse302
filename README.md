@@ -61,6 +61,10 @@ I am running Home Assistant within Hass.io on an Raspberry Pi B+.
  <img width="250" src="/images/screenshots-03.jpg">
 </p>
 
+### Automations
+
+1. Send notification if new Home Assistant release through HTLM5 and creates a persistent notification.
+
 # Theme
 
 ~~~~
