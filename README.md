@@ -135,7 +135,7 @@ Dark:
 Hubs
 ### Switches
 
-| TP-Link HS200        | Sonoff Mini           | Sonoff Pow  |
+| [TP-Link HS200](https://www.tp-link.com/la/home-networking/smart-switch/hs200/) | Sonoff Mini           | Sonoff Pow R2  |
 |:-------------:|:-------------:|:-------------:|
 | <p align="center"><img width="200" src="/images/HS200.jpg"></p> | <p align="center"><img width="200" src="/images/HS200.jpg"></p> | <p align="center"><img width="200" src="/images/HS200.jpg"></p> |
 | U$      | U$      | U$      |
