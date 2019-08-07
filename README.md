@@ -133,6 +133,12 @@ Dark:
 # Devices
 
 Hubs
+### Switches
+
+TP-Link HS200 | Sonoff Mini | Sonoff Pow
+--- | --- | ---
+<p align="center"><img width="200" src="/images/HS200.jpg"></p> | <p align="center"><img width="200" src="/images/HS200.jpg"></p>` | <p align="center"><img width="200" src="/images/HS200.jpg"></p>
+U$ | 2 | 3
 
 ### Lighting
 
