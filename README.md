@@ -75,6 +75,7 @@ I am running Home Assistant within Hass.io on an Raspberry Pi B+.
 4. Daily Automatic Cleaning when nobody is home via Xiaomi Roborock Robot Vacuum Cleaner 2
 5. Turn on Entryway light for 10 minutes once I get home (and its dark).
 6. AC Split System control via Broadlink RM Pro.
+7. On motion turn on lights.
 
 # Theme
 
