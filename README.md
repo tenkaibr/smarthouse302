@@ -61,6 +61,18 @@ I am running Home Assistant within Hass.io on an Raspberry Pi B+.
  <img width="250" src="/images/screenshots-03.jpg">
 </p>
 
+
+### Home Assistant Integrations
+
+1. [Google Assistant](https://www.home-assistant.io/components/google_assistant/) - The google_assistant integration allows you to control things via Google Assistant (on your mobile or tablet) or a Google Home device.
+2. [Google Calendar Event](https://www.home-assistant.io/components/calendar.google/) - The google calendar platform allows you to connect to your Google Calendars and generate binary sensors.
+3. [Push Notifications](https://www.home-assistant.io/components/html5/) - The html5 notification platform enables you to receive push notifications to Chrome or Firefox, no matter where you are in the world.
+4. [Xiaomi Gateway (Aqara)](https://www.home-assistant.io/components/xiaomi_aqara/) - The xiaomi_aqara integration allows you to integrate Xiaomi Aqara-compatible devices into Home Assistant.
+5. [Broadlink](https://www.home-assistant.io/components/broadlink/) - There is currently support for the following device types within Home Assistant:
+6. [Dark Sky](https://www.home-assistant.io/components/weather.darksky/) - The darksky platform uses the Dark Sky web service as a source for meteorological data for your location.
+7. [MQTT](https://www.home-assistant.io/components/mqtt/) - MQTT (aka MQ Telemetry Transport) is a machine-to-machine or “Internet of Things” connectivity protocol on top of TCP/IP. It allows extremely lightweight publish/subscribe messaging transport.
+8. [Xiaomi Mi Robot Vacuum](https://www.home-assistant.io/components/vacuum.xiaomi_miio/) - The xiaomi_miio vacuum platform allows you to control the state of your Xiaomi Mi Robot Vacuum. <span style="color:red">TO DO</span>.
+
 ### Automations
 
 1. Send notification if new Home Assistant release through HTLM5 and creates a persistent notification.
