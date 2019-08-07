@@ -84,9 +84,11 @@ Note: Private information is stored in secrets.yaml (not uploaded)
 
 ### Screenshots
 
-![Screenshots 01](/images/screenshots-01.jpg =250x)
-![Screenshots 02](/images/screenshots-02.jpg =250x)
-![Screenshots 03](/images/screenshots-03.jpg =250x)
+<p align="center">
+ <img width="250" src="/images/screenshots-01.jpg">
+ <img width="250" src="/images/screenshots-02.jpg">
+ <img width="250" src="/images/screenshots-03.jpg">
+</p>
 
 ~~~~
 Dark:
