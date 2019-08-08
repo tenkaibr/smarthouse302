@@ -22,6 +22,7 @@ This configuration controls a couple of significant features in my smart home.
 8. Ambient sound.
 9. Voice control.
 10. Pet urinal hygiene.
+11. PC Control
 
 ### Main Hardware
 
@@ -76,6 +77,7 @@ I am running Home Assistant within Hass.io on an Raspberry Pi B+.
 5. Turn on Entryway light for 10 minutes once I get home (and its dark).
 6. AC Split System control via Broadlink RM Pro.
 7. On motion turn on lights.
+8. PC control with [IOT Link](https://gitlab.com/iotlink/iotlink)
 
 # Theme
 
