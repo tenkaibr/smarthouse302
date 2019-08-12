@@ -7,7 +7,9 @@ This is my Home Assistant configuration for a small appartment with 7 rooms (liv
 
 Be sure to ⭐️ my configuration repo so you can keep up to date on any daily progress! Don't forget to check out [my blog](https://smarthouse302.blogspot.com/) and [my instagram account](https://www.instagram.com/smarthouse302/).
 
-If you like my work <a href="https://www.buymeacoffee.com/IDQcqN2" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>>.
+If you like my work
+ 
+ <img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" >.
 
 # General Overview
 This configuration controls a couple of significant features in my smart home.
